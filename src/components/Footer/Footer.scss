@@ -1,9 +1,15 @@
-@use '../../styles/partials/_mixins.scss';
-@use '../../styles/partials/_global.scss';
-@use '../../styles/partials/_variables.scss';
+@use '../../styles/partials/_mixins.scss' as *;
+@use '../../styles/partials/_global.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
 
 .footer {
   display: flex;
+  background-color: #727882;
+  border-radius: 20px;
+  padding: 1rem;
+  @include desktop {
+    flex-flow: row nowrap;
+  }
 }
 .footer p {
   font-size: 2rem;
