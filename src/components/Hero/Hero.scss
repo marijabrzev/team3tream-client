@@ -12,7 +12,7 @@
     justify-items: center;
     align-items: center;
     grid-gap: 50px;
-    background-color: #182542;
+    background-color: $third;
     padding: 40px 30px 80px 30px;
 
     @include desktop {
@@ -26,30 +26,31 @@
     }
     &-image {
         grid-area: imagebox;
-        object-fit: contain;
+        border: 8px solid black;
+        object-fit: cover;
         @include desktop {
-            width: 500px; 
-            height: 250px; 
+            width: 400px;
+            height: 350px;
         }
     }
 
     &-title {
-        color: white;
+        color: $white;
         @include desktop {
-            font-size: 35px;
+            font-size: 45px;
             font-weight: 600;
-            width: 80%;
+            width: 70%;
             padding: 40px 0px 0px 0px;
         }
     }
 
     &-text {
-        color: white;
+        color: $white;
         @include desktop {
-            font-size: 20px;
+            font-size: 26px;
             font-weight: 400;
             padding: 3px 0px;
-            width: 100%;
+            width: 85%;
         }
     }
 
