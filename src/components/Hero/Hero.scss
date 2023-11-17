@@ -1,0 +1,51 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.hero__container {
+    display: flex;
+    background-color: #9acac4;
+    border-radius: 15px;
+    flex-direction: column;
+    padding: 40px 30px 100px 30px;
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 80px 100px 80px;
+    }
+    &-image {
+        border-radius: 20px;
+        border: 8px solid #3d3d3d;
+        background-color: #dddddd;
+        width: 200px;
+        height: 130px;
+        @include desktop {
+            width: 400px;
+            height: 200px;
+        }
+    }
+
+    &-title {
+        @include mobileH1;
+        @include desktop {
+            @include desktopH1;
+            padding: 3px 0px;
+        }
+    }
+
+    &-text {
+        @include mobileH2;
+        @include desktop {
+            @include desktopH2;
+            padding: 3px 0px;
+        }
+    }
+
+    &-textbox {
+        @include desktop {
+            padding-top: 20px;
+        }
+    }
+}
