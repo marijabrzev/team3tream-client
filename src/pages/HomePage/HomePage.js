@@ -6,6 +6,8 @@ import Hero from "../../components/Hero/Hero";
 import Theater from "../../components/Theater/Theater";
 import Footer from "../../components/Footer/Footer";
 import Watch from "../../components/Watch/Watch";
+import MainVideos from "../../components/MainVideos/MainVideos";
+
 
 function HomePage() {
    
@@ -15,6 +17,7 @@ function HomePage() {
            <Hero />
            <Watch/>
            <Theater />
+           <MainVideos />
            <Footer />
         </>
     );

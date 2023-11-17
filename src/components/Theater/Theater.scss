@@ -1,9 +1,34 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.theater-container {
+    background-color: $third;
+}
 .theater-text {
     &__header {
         text-align: center;
+        @include desktopH2;
+        color: $white;
+        padding: 2rem;
     }
 
     &__body {
         text-align: center;
+        @include desktopP1;
+        color: $white;
+        padding: 1rem 4rem 1.5rem 4rem;
     }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-button {
+    display: flex;
+    justify-content: center;
+    border-radius: $buttonRadius;
+    background-color: $secondary;
 }

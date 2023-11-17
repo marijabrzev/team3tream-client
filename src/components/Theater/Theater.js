@@ -8,17 +8,19 @@ export default function Theater() {
     return (
         <div className="outmost">
             <div className="theater-container">
-                <div className="theater-hero">Hero image</div>
                 <div className="theater-text">
                     <h1 className="theater-text__header">
-                        choose something to watch before your food gets cold
+                        Say goodbye to endless scrolling and hello to personalized movie magic{" "}
                     </h1>
-                    <h2 className="theater-text__body">
-                        quick description on how to use the app. Click on your favourite and watch
-                        any, anytime!
-                    </h2>
-                    <div>
-                        <QuizButton />
+                    <p className="theater-text__body">
+                        Try out our unique assessment to get a tailored movie experience. By
+                        understanding your current vibe, we handpick a selection of films perfectly
+                        aligned with your mood.
+                    </p>
+                    <div className="button-container">
+                        <button className="quiz-button">
+                            <QuizButton />
+                        </button>
                     </div>
                 </div>
             </div>

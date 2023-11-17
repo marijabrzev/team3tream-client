@@ -1,0 +1,33 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+
+.mainvideos__container {
+    background-color: $third;
+    padding: 20px 40px;
+
+    &-text {
+        color:$white;
+        text-align: center;
+        padding: 5px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    &-moviebox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    &-images {
+        width: 96px;
+        height: 128px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    &-textbox {
+        margin-top: 20px;
+    }
+}
