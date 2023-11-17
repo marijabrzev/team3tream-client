@@ -4,26 +4,37 @@
 @use "../../styles/partials/fonts" as *;
 
 .hero__container {
-    display: flex;
+    display: grid;
+    grid-template-areas:
+        "titlebox"
+        "imagebox"
+        "textbox";
+    justify-items: center;
+    align-items: center;
+    grid-gap: 50px;
     background-color: #9acac4;
     border-radius: 15px;
-    flex-direction: column;
-    padding: 40px 30px 100px 30px;
+    padding: 40px 30px 80px 30px;
 
     @include desktop {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 40px 80px 100px 80px;
+        grid-template-areas:
+            "titlebox imagebox"
+            "textbox imagebox";
+        justify-items: flex-start;
+        align-items: normal;
+        grid-gap: 10px;
+        padding: 40px 0px 100px 80px;
     }
     &-image {
+        grid-area: imagebox;
         border-radius: 20px;
         border: 8px solid #3d3d3d;
         background-color: #dddddd;
         width: 200px;
         height: 130px;
         @include desktop {
-            width: 400px;
-            height: 200px;
+            width: 500px;
+            height: 250px;
         }
     }
 
@@ -44,8 +55,15 @@
     }
 
     &-textbox {
+        grid-area: textbox;
+
         @include desktop {
             padding-top: 20px;
+            margin-right: 300px;
         }
+    }
+
+    &-titlebox {
+        grid-area: titlebox;
     }
 }
