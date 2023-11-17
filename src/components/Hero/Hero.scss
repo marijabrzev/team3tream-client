@@ -12,7 +12,7 @@
     justify-items: center;
     align-items: center;
     grid-gap: 50px;
-    background-color: #182542;
+    background-color: $third;
     padding: 40px 30px 80px 30px;
 
     @include desktop {
@@ -28,13 +28,13 @@
         grid-area: imagebox;
         object-fit: contain;
         @include desktop {
-            width: 500px; 
-            height: 250px; 
+            width: 500px;
+            height: 250px;
         }
     }
 
     &-title {
-        color: white;
+        color: $white;
         @include desktop {
             font-size: 35px;
             font-weight: 600;
@@ -44,7 +44,7 @@
     }
 
     &-text {
-        color: white;
+        color: $white;
         @include desktop {
             font-size: 20px;
             font-weight: 400;
