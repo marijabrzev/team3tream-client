@@ -16,7 +16,6 @@
 }
 
 .movie-card {
-    border: 1px solid black;
     margin: 1rem;
     width: 150px;
 
@@ -30,7 +29,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         @include desktopH3;
-        padding: 0.5rem;
+        padding: 0.25rem;
+        box-shadow: 0 0 3px #ccc;
+        border-radius: 10px;
     }
 
     &__button {
@@ -47,4 +48,8 @@
 .modal-button {
     display: flex;
     justify-content: center;
+}
+
+#modal-modal-title {
+    text-align: center;
 }
