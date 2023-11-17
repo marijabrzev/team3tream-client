@@ -97,7 +97,7 @@ export default function QuizButton() {
 
     return (
         <div className="modal-button">
-            <Button className="modal-button__button" onClick={handleOpen}>
+            <Button className='modal-button__button' style={{color: 'white'}} onClick={handleOpen}>
                 FIND A MOVIE TO WATCH!
             </Button>
             <Modal

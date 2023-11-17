@@ -15,7 +15,6 @@ function HomePage() {
         <>
            <Header />
            <Hero />
-           <Watch/>
            <Theater />
            <MainVideos />
            <Footer />
