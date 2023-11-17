@@ -15,10 +15,10 @@ function Header() {
                         <Link to="/">About</Link>
                     </li>
                     <li className="rightside__list-item">
-                        <Link to="/cart">Blog</Link>
+                        <Link to="/blog">Blog</Link>
                     </li>
                     <li className="rightside__list-item">
-                        <Link to="/cart">Contact</Link>
+                        <Link to="/contact">Contact</Link>
                     </li>
 
                     <li className="rightside__list-item--hover">
