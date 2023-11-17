@@ -1,0 +1,69 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.hero__container {
+    display: grid;
+    grid-template-areas:
+        "titlebox"
+        "imagebox"
+        "textbox";
+    justify-items: center;
+    align-items: center;
+    grid-gap: 50px;
+    background-color: #9acac4;
+    border-radius: 15px;
+    padding: 40px 30px 80px 30px;
+
+    @include desktop {
+        grid-template-areas:
+            "titlebox imagebox"
+            "textbox imagebox";
+        justify-items: flex-start;
+        align-items: normal;
+        grid-gap: 10px;
+        padding: 40px 0px 100px 80px;
+    }
+    &-image {
+        grid-area: imagebox;
+        border-radius: 20px;
+        border: 8px solid #3d3d3d;
+        background-color: #dddddd;
+        width: 200px;
+        height: 130px;
+        @include desktop {
+            width: 500px;
+            height: 250px;
+        }
+    }
+
+    &-title {
+        @include mobileH1;
+        @include desktop {
+            @include desktopH1;
+            padding: 3px 0px;
+        }
+    }
+
+    &-text {
+        @include mobileH2;
+        @include desktop {
+            @include desktopH2;
+            padding: 3px 0px;
+        }
+    }
+
+    &-textbox {
+        grid-area: textbox;
+
+        @include desktop {
+            padding-top: 20px;
+            margin-right: 300px;
+        }
+    }
+
+    &-titlebox {
+        grid-area: titlebox;
+    }
+}
