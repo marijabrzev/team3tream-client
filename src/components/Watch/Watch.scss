@@ -1,0 +1,39 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.watch {
+    background-color: black;
+    text-align: center;
+    color: white;
+
+    &__show {
+        font-size: 1.125rem;
+    }
+
+    &__genre {
+        font-size: .875rem;
+        margin-top: 1.5rem;
+    }
+
+    &__content {
+        font-size: 3rem;
+        margin-top: 1.75rem;
+        margin-bottom: 1.75rem;
+    }
+
+    &__rating {
+        align-items: left;
+    }
+
+    &__button {
+        margin-top: 3rem;
+        background-color: #0e72ed;
+        height: 3.75rem;
+        border-radius: .5rem;
+        width: 8%;
+        margin-bottom: 3rem;
+    }
+    
+
+}
