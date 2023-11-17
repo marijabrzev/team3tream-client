@@ -1,0 +1,10 @@
+@use '../../styles/partials/_mixins.scss';
+@use '../../styles/partials/_global.scss';
+@use '../../styles/partials/_variables.scss';
+
+.footer {
+  display: flex;
+}
+.footer p {
+  font-size: 2rem;
+}
