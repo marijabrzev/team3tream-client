@@ -107,4 +107,6 @@
 ////////////////////////////////////////////////// Inputs ///////////
 @mixin button {
     border-radius: $buttonRadius;
+    border: 2px solid $secondary;
+    padding: 0.45rem;
 }
