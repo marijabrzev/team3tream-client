@@ -29,6 +29,7 @@ export default function QuizButton() {
     const [error, setError] = useState(null);
     const [movieRefinementCount, setMovieRefinementCount] = useState(0);
     const [genres, setGenres]= useState([]);
+    const [currentMovie, setCurrentMovie] = useState(null);
 
     const fetchNewMovies = async (movieId) => {
         try {
@@ -78,20 +79,19 @@ export default function QuizButton() {
     }, []);
 
     const handleMovieClick = async (movieId) => {
+        const moviesArray = movies;
+        const clickedMovie = moviesArray.find((movie) => movie.id === movieId);
+        setCurrentMovie(clickedMovie);
         if (movieRefinementCount === 3) {
             console.log("3 refinement stages finsished, display the new component");
+            console.log('currentMovie', currentMovie);
             return;
         }
         setMovieRefinementCount(movieRefinementCount + 1);
 
-        const moviesArray = movies;
         const clickedMovieIndex = moviesArray.findIndex((movie) => movie.id === movieId);
-        const clickedMovie = moviesArray.find((movie) => movie.id === movieId);
-    console.log(clickedMovie);
         const newMovies = await fetchNewMovies(movieId);
         newMovies.splice(clickedMovieIndex, 0, clickedMovie);
-    console.log('genres');
-    console.log(genres);
         setMovies(newMovies);
     };
 
@@ -106,7 +106,7 @@ export default function QuizButton() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                {(movieRefinementCount === 3 && <Watch />) || (
+                {(movieRefinementCount === 3 && <Watch currentMovie={currentMovie} />) || (
                     <Box sx={style}>
                         <Typography id="modal-modal-title" variant="h6" component="h2">
                             Explore the perfect match for your current mood! Which option aligns
