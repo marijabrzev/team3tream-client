@@ -51,6 +51,9 @@
 .modal-button {
     display: flex;
     justify-content: center;
+    &__button {
+      color: white;
+    }
 }
 
 #modal-modal-title {
