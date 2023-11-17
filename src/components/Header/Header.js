@@ -7,25 +7,23 @@ function Header() {
     return (
         <nav className="navbar">
             <div className="leftside">
-                <img src="" alt="logo-image" />
+                <img src="" alt="logo-image" className="leftside-logo"/>
             </div>
             <div className="rightside">
                 <ul className="rightside__list-parent">
                     <li className="rightside__list-item">
-                        <Link to="/">Home</Link>
+                        <Link to="/">About</Link>
                     </li>
                     <li className="rightside__list-item">
-                        <Link to="/cart">Movies</Link>
+                        <Link to="/cart">Blog</Link>
                     </li>
                     <li className="rightside__list-item">
-                        <Link to="/cart">Tv Shows</Link>
+                        <Link to="/cart">Contact</Link>
                     </li>
-                    <li className="rightside__list-item">
-                        <Link to="/about">About</Link>
-                    </li>
+                    
                     <li className="rightside__list-item--hover">
                         <Link to="/login">
-                            <img className="rightside__profile" src={userImg} alt="profile pic" />
+                            <button className="rightside__list-item--button">Get the App</button>
                         </Link>
                     </li>
                 </ul>
