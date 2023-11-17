@@ -1,3 +1,5 @@
+import "./Theater.scss";
+
 export default function Theater() {
     return (
         <div className="theater-container">
@@ -10,7 +12,22 @@ export default function Theater() {
                     quick description on how to use the app. Click on your favourite and watch any,
                     anytime!
                 </h2>
-                <div className="move-cards-container">
+                <div className="movie-cards-container">
+                    <div className="movie-card">
+                        <img className="movie-card__poster" src="" alt="movie poster" />
+                        <p>a description of the movie</p>
+                        <button className="movie-card__button">Watch Now!</button>
+                    </div>
+                    <div className="movie-card">
+                        <img className="movie-card__poster" src="" alt="movie poster" />
+                        <p>a description of the movie</p>
+                        <button className="movie-card__button">Watch Now!</button>
+                    </div>
+                    <div className="movie-card">
+                        <img className="movie-card__poster" src="" alt="movie poster" />
+                        <p>a description of the movie</p>
+                        <button className="movie-card__button">Watch Now!</button>
+                    </div>
                     <div className="movie-card">
                         <img className="movie-card__poster" src="" alt="movie poster" />
                         <p>a description of the movie</p>
