@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
 import "./HomePage.scss";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
