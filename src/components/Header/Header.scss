@@ -5,7 +5,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: #091D42;
+    background-color: #091d42;
     padding: 1.5rem 1rem;
 }
 
@@ -34,7 +34,8 @@
 
     &__list-item {
         margin: 0.5rem 1rem 0.5rem 1rem;
-        color: white;
+        color: $white;
+        @include desktopH4;
 
         &:hover {
             border-bottom: 2px solid $primary;
@@ -52,7 +53,7 @@
             text-transform: uppercase;
             font-size: 13px;
             font-weight: 500;
-            background-color: #3385D6;
+            background-color: #3385d6;
         }
     }
 

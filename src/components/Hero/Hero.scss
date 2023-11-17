@@ -26,13 +26,10 @@
     }
     &-image {
         grid-area: imagebox;
-        border: 8px solid #3d3d3d;
-        background-color: #dddddd;
-        width: 200px;
-        height: 130px;
+        object-fit: contain;
         @include desktop {
-            width: 500px;
-            height: 250px;
+            width: 500px; 
+            height: 250px; 
         }
     }
 
@@ -43,7 +40,6 @@
             font-weight: 600;
             width: 80%;
             padding: 40px 0px 0px 0px;
-
         }
     }
 
@@ -62,7 +58,6 @@
 
         @include desktop {
             margin-right: 200px;
-
         }
     }
 
