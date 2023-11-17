@@ -1,0 +1,37 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.movie-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    border: 1px solid black;
+    margin: 1rem;
+
+    &__poster {
+        width: 150px;
+        height: 200px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.outmost {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(black, 0.7);
+}
