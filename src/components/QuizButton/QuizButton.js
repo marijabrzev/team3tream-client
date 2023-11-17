@@ -28,8 +28,7 @@ export default function QuizButton() {
     const [movies, setMovies] = useState(null);
     const [error, setError] = useState(null);
     const [movieRefinementCount, setMovieRefinementCount] = useState(0);
-   // const [genres, setGenres]= useState({});
-    const genres = {};
+    const [genres, setGenres]= useState([]);
 
     const fetchNewMovies = async (movieId) => {
         try {
@@ -67,13 +66,9 @@ export default function QuizButton() {
                 let data = response.data;
                 const results = data.results.slice(0, 4);
                 setMovies(results);
-                const updatedMovies = data.map((movie) => ({
-                    ...movie,
-                    posterUrl: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
-                }));
                 const fetchGenres = await axios.get('https://api.themoviedb.org/3/genre/movie/list?language=en', options);
-        console.log('hello');
-        genres = fetchGenres;
+        console.log(fetchGenres.data.genres);
+                setGenres(fetchGenres.data.genres);
             } catch (error) {
                 setError(error);
             }
@@ -103,7 +98,7 @@ export default function QuizButton() {
     return (
         <div className="modal-button">
             <Button className="modal-button__button" onClick={handleOpen}>
-                Movie Picker!
+                FIND A MOVIE TO WATCH!
             </Button>
             <Modal
                 open={open}
@@ -126,7 +121,7 @@ export default function QuizButton() {
                                     <>
                                         <div className="movie-card-container__col">
                                             <div className="movie-card__button-div">
-                                                <div className="movie-card__button">{}</div>
+                                                <div className="movie-card__button">{genres && genres.find(genre => genre.id === movie.genre_ids[0])?.name || 'action'}</div>
                                             </div>
                                             <div
                                                 onClick={() => {
