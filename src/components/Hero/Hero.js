@@ -1,5 +1,5 @@
 import "./Hero.scss";
-import Tv from "../../assets/images/Hero.png";
+import Tv from "../../assets/images/TV.png";
 
 function Hero() {
     return (
