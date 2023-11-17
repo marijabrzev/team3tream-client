@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Footer from "../Footer/Footer";
+import Watch from '../Watch/Watch.js';
 
 const style = {
     position: "absolute",
@@ -14,8 +15,8 @@ const style = {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "80%",
-    bgcolor: "background.paper",
-    border: "2px solid #000",
+    bgcolor: "#193058",
+    borderRadius: 4,
     boxShadow: 24,
     p: 4,
 };
@@ -27,6 +28,8 @@ export default function QuizButton() {
     const [movies, setMovies] = useState(null);
     const [error, setError] = useState(null);
     const [movieRefinementCount, setMovieRefinementCount] = useState(0);
+   // const [genres, setGenres]= useState({});
+    const genres = {};
 
     const fetchNewMovies = async (movieId) => {
         try {
@@ -43,10 +46,6 @@ export default function QuizButton() {
             let data = response.data;
             const results = data.results.slice(0, 3);
             return results;
-            const updatedMovies = data.map((movie) => ({
-                ...movie,
-                posterUrl: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
-            }));
         } catch (error) {
             setError(error);
         }
@@ -72,6 +71,9 @@ export default function QuizButton() {
                     ...movie,
                     posterUrl: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
                 }));
+                const fetchGenres = await axios.get('https://api.themoviedb.org/3/genre/movie/list?language=en', options);
+        console.log('hello');
+        genres = fetchGenres;
             } catch (error) {
                 setError(error);
             }
@@ -90,8 +92,11 @@ export default function QuizButton() {
         const moviesArray = movies;
         const clickedMovieIndex = moviesArray.findIndex((movie) => movie.id === movieId);
         const clickedMovie = moviesArray.find((movie) => movie.id === movieId);
+    console.log(clickedMovie);
         const newMovies = await fetchNewMovies(movieId);
         newMovies.splice(clickedMovieIndex, 0, clickedMovie);
+    console.log('genres');
+    console.log(genres);
         setMovies(newMovies);
     };
 
@@ -106,11 +111,14 @@ export default function QuizButton() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                {(movieRefinementCount === 3 && <Footer />) || (
+                {(movieRefinementCount === 3 && <Watch />) || (
                     <Box sx={style}>
                         <Typography id="modal-modal-title" variant="h6" component="h2">
                             Explore the perfect match for your current mood! Which option aligns
                             with your vibe?
+                        </Typography>
+                        <Typography id="modal-modal-subtitle" variant="h6" component="h2">
+                            (Select One)
                         </Typography>
                         <div className="movie-cards-container">
                             {movies &&
@@ -118,7 +126,7 @@ export default function QuizButton() {
                                     <>
                                         <div className="movie-card-container__col">
                                             <div className="movie-card__button-div">
-                                                <div className="movie-card__button">**Genere**</div>
+                                                <div className="movie-card__button">{}</div>
                                             </div>
                                             <div
                                                 onClick={() => {
