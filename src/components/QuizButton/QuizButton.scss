@@ -25,18 +25,21 @@
     }
 
     &__title {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         @include desktopH3;
+        margin-top: 0.75rem;
         padding: 0.25rem;
-        box-shadow: 0 0 3px #ccc;
         border-radius: 10px;
+        color: white;
+        text-align: center;
     }
 
     &__button {
         @include desktopH4;
-        @include button;
+        color: white;
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
     }
 
     &__button-div {
@@ -52,4 +55,14 @@
 
 #modal-modal-title {
     text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+#modal-modal-subtitle {
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
 }
