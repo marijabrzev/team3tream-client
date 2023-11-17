@@ -14,9 +14,8 @@
     &__left {
         &__logo {
             font-size: 1.5rem;
-            background: #fa9597;
-            border-radius: 20px;
             padding: 0.5rem;
+            height: 40px;
         }
         &__text {
             margin: 1rem 0;
@@ -44,7 +43,8 @@
         &-linksleft {
           display: flex;
          flex-direction: column;
-         padding-left: 30px;
+         padding-left: 40px;
+         padding-right: 80px;
          
         }
         &-linksright {
@@ -56,24 +56,26 @@
             display: flex;
             margin-bottom: 1.5rem;
             &__text {
-                font-size: 0.8rem;
-                margin: 1rem 1.5rem 0rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+                margin: 0.5rem 3rem 0rem 0;
                 color: white;
                 text-transform: uppercase;
             }
 
             &-box {
                 border-radius: 10px;
-                padding: 5px 15px;
+                padding: 10px 15px;
                 width: 130px;
                 font-size: 11px;
+                color: #182E54;
             }
 
             &-button {
                 color: white;
-                background-color: #0052A3;
+                background-color: #3F4A62;
                 border-radius: 10px;
-                padding: 8px 20px;
+                padding: 10px 20px;
                 margin-left: 20px;
                 font-size: 11px;
             }
@@ -84,18 +86,18 @@
             color: white;
 
             &__copyright {
-                font-size: 10px;
+                font-size: 12px;
                 padding: 7px 0px;
             }
             &__contentleft {
                 margin-right: 2rem;
-                font-size: 12px;
+                font-size: 13px;
                 padding: 5px 0px;
                 font-weight: 500;
             }
             &__contentright {
                 margin-right: 2rem;
-                font-size: 12px;
+                font-size: 13px;
                 padding: 5px 0px;
                 font-weight: 500;
             }

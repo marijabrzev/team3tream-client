@@ -2,12 +2,13 @@ import "./Footer.scss";
 import twitterIcon from "../../assets/icons/Icon-twitter.svg";
 import facebookIcon from "../../assets/icons/Icon-facebook.svg";
 import instagramIcon from "../../assets/icons/Icon-instagram.svg";
+import Logo from "../../assets/images/logo.svg";
 
 export default function Footer() {
     return (
         <div className="footer">
             <div className="footer__left">
-                <img src="" className="footer__left__logo" />
+                <img src={Logo} className="footer__left__logo" />
                 <div className="footer__left__text">
                     <p>Immerse yourself in a world of endless entertainment with Kameleon. Let your mood be the guide as you explore a world of content tailored just for you. Elevate your streaming experience with us!</p>
                 </div>
