@@ -18,6 +18,7 @@ export default function Theater() {
                         any, anytime!
                     </h2>
                     <div>
+                    <QuizButton />
                         <Link to={`/quizbutton`}>
                             <button>Pick a movie</button>
                         </Link>
