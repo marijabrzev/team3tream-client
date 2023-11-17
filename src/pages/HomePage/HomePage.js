@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import Theater from "../../components/Theater/Theater";
 import Footer from "../../components/Footer/Footer";
+import Watch from "../../components/Watch/Watch";
 
 function HomePage() {
    
@@ -12,6 +13,7 @@ function HomePage() {
         <>
            <Header />
            <Hero />
+           <Watch/>
            <Theater />
            <Footer />
         </>
